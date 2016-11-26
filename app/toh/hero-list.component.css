@@ -1,0 +1,18 @@
+
+.mainDiv {
+  display: block;
+  width: 800px;
+  margin: 0px auto;
+  border: 1 solid #CCC;
+  background: #d1d1d1;
+}
+
+.mainDiv > block1, .mainDiv > block2 {
+    display: table-cell;
+    width: 300px;
+    height: 400px;
+}
+
+.mainDiv > block1 {
+   float: left;
+}

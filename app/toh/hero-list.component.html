@@ -1,0 +1,46 @@
+
+<h1>Tour of Heroes ({{model}})</h1>
+<h3>Heroes:</h3>
+
+<div class="mainDiv">
+  <div class="block1">
+<ul>
+    <li *ngFor="let hero of heroes">{{hero | json}}</li>
+</ul>
+<li *ngFor="let T of Token">{{T.id_token1 | json }}</li>
+    <form #form="ngForm">
+        <label>Email:</label>
+      <input type="email" name="email" ngModel><br>
+
+      <label>Username:</label>
+      <input type="text" name="username" ngModel><br>
+      
+      <label>cell Number:</label>
+      <input type="tel" name="cell_num" ngModel><br>
+
+      <label>Admin:</label>
+      <input type="checkbox" name="admin" ngModel><br>
+      
+        <label>Password:</label>
+      <input type="password" name="password" ngModel><br>
+      <button type="button" (click)="addHero(form.value)">Create</button>
+      
+      
+    </form>
+
+    <p class="error" *ngIf="erroMessage">{{errorMessage}}</p>
+        <form #logform="ngForm">
+        <label>Email:</label>
+      <input type="email" name="email" ngModel><br>
+      <label>Username:</label>
+      <input type="text" name="username" ngModel><br>      
+        <label>Password:</label>
+      <input type="password" name="password" ngModel><br>
+      <button type="button" (click)="LogHero(logform.value)">Login</button>
+      <button type="button" (click)="Logout()">Getit </button>
+      
+      
+    </form>
+
+  </div>
+</div>
